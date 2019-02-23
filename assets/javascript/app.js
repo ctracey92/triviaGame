@@ -1,5 +1,3 @@
-
-
 //Timer for the game, works and displays
 
 //Starting variables for the timer
@@ -17,7 +15,7 @@ window.onload = function(){
         //Displays the countdown
         function countdown (){
             time--;
-            $("#timeLeft").text(time);
+            $("#timeLeft").text("Time left: " + time);
         
             if (time <= 0){
                 running = false;
@@ -25,4 +23,12 @@ window.onload = function(){
             }
         }
 }
+
+//Variables for correct and incorrect answers
+var correct = 0;
+var incorrect = 0;
+
+//Display them to the page
+$("#correctAnswers").text("Correct: " + correct);
+$("#incorrectAnswers").text("Incorrect: " + incorrect);
 
