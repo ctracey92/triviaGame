@@ -1,5 +1,3 @@
-//Timer for the game, works and displays
-
 //Starting variables for the timer
 var time = 60;
 var running = true; 
@@ -25,8 +23,6 @@ function timer(){
     }
 }
 
-
-
 //Variables for correct and incorrect answers
 var correct = 0;
 var incorrect = 0;
@@ -35,6 +31,7 @@ var incorrect = 0;
 $("#correctAnswers").text("Correct: " + correct);
 $("#incorrectAnswers").text("Incorrect: " + incorrect);
 
+//Game Running Conditions
 if (time > 0){
     gameRunning = true;
 }
