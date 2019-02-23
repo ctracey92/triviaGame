@@ -5,24 +5,27 @@ var time = 60;
 var running = true; 
 var intervalID;
 
-//Currently on page load begins the one minute timer
-window.onload = function(){
-    intervalID = setInterval(countdown, 1000);
-    if (running === "true"){
-        countdown()
+//Game running varaible
+var gameRunning;
+
+//Currently on page load begins the timer
+window.onload = timer();
+function timer(){
+    if (time >= 0){
+        intervalID = setInterval(countdown, 1000);
+    }
+    //Displays the countdown and clears the interval when time reaches 0
+    function countdown (){
+        time--;
+        $("#timeLeft").text("Time left: " + time);
+        if (time <= 0){
+            console.log("times up")
+            clearInterval(intervalID);
         }
-        
-        //Displays the countdown
-        function countdown (){
-            time--;
-            $("#timeLeft").text("Time left: " + time);
-        
-            if (time <= 0){
-                running = false;
-                alert("Time's Up!")
-            }
-        }
+    }
 }
+
+
 
 //Variables for correct and incorrect answers
 var correct = 0;
@@ -32,3 +35,10 @@ var incorrect = 0;
 $("#correctAnswers").text("Correct: " + correct);
 $("#incorrectAnswers").text("Incorrect: " + incorrect);
 
+if (time > 0){
+    gameRunning = true;
+}
+
+else if (time <= 0){
+    gameRunning = false;
+}
