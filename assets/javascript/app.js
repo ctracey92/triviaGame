@@ -39,3 +39,11 @@ if (time > 0){
 else if (time <= 0){
     gameRunning = false;
 }
+
+//Pseudo code
+// while the game is running run the following functions
+// check to see if all questions have been answered & time > 0, if yes stop game and score
+//otherwise if all questions havent been answered & time > 0, keep going
+//if time == 0 stop game and score
+
+//scoring- if true answer was selected correct+  if incorrect answer was selected incorrect
