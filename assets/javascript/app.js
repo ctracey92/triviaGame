@@ -6,7 +6,7 @@ var submitted = false;
 
 //Variables for user answers/answer key
 var userAnswers = [];
-var answersKey = ["1" , "1" , "1" , "1" , ]
+var answersKey = ["1" , "1" , "1" , "1" , "1" ]
 
 //Variables for correct and incorrect answers
 var correct = 0;

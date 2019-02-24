@@ -13,18 +13,26 @@
 }
 
 body {
-    background-image: url(../images/parchment.jpg);
+    background: url(../images/f54890248-1.jpg); 
+    background-color: #efe8d4;
     font-family: 'dnd', cursive;
     font-weight: bold;
+    background-size: cover;
 }
 
 #timeLeft{
-    color: red;
+    color:#691817;
     font-size: 30px;
 }
 
-.container{
+#main{
     max-width: 400px;
+    border-bottom:solid 5px goldenrod;
+    border-top: solid 5px goldenrod;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 2.5px grey;
+    background-color: #efe8d4;
 }
 
 h1{
@@ -37,4 +45,24 @@ h1{
 
 #potion, #sword{
     max-width: 40px;
+}
+
+#logo{
+    max-width: 80px;
+}
+
+li{
+    border: 3px solid #cfb780;
+    margin: 5px;
+    background-color: cornsilk;
+}
+
+.container{
+max-width: 400px;
+background-color: #efe8d4;
+}
+
+#submitButton{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
