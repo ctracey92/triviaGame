@@ -15,10 +15,6 @@ var gameRunning;
 var correct = 0;
 var incorrect = 0;
 
-//Display them to the page
-$("#correctAnswers").text("Correct: " + correct);
-$("#incorrectAnswers").text("Incorrect: " + incorrect);
-
 //Game Running Conditions
 if (time > 0){
     gameRunning = true;
@@ -56,7 +52,16 @@ function endGame(){
         }
     $("#correctAnswers").text("Correct: " + correct);
     $("#incorrectAnswers").text("Incorrect: " + incorrect);
-    
+}
+//Shows End Game box
+function showScore() {
+    $("#gameOver").css("display", "block")
+}
+
+//Hides the questions/timer/done button
+function hideAll(){
+    $("#questions").css("display", "none");
+    $("#timeLeft").css("display", "none");
 }
 
 //Pushes user input into array and checks against to see if the submit button was pressed, runs end game function
@@ -71,6 +76,8 @@ function answers(){
     submitted = true;
     if (submitted === true){
         endGame();
+        showScore();
+        hideAll();
         alert("Game Over");
         clearInterval(intervalID);
     }
@@ -80,6 +87,9 @@ function answers(){
 $("#submitButton").on("click", function doneWithGame(){
 answers()
 })
+
+
+
 
 
 

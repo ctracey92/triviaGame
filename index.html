@@ -11,8 +11,7 @@
 <body>
     <h1>Trivia Game</h1>
     <div id="timeLeft"> Time left: 60</div>
-    <div id="correctAnswers"></div>
-    <div id="incorrectAnswers"></div>
+    
 
     <div id="questions">
         <ol>
@@ -55,8 +54,13 @@
 
             </li>
         </ol>
-        <input type="submit" id="submitButton">
+        <input type="submit" id="submitButton" value="Done!">
     </div>
+
+    <div id="gameOver">
+            <div id="correctAnswers"></div>
+            <div id="incorrectAnswers"></div>
+        </div>
 
 <!-- Link to JS sheets via CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
