@@ -3,27 +3,13 @@ var time = 60;
 var running = true; 
 var intervalID;
 var submitted = false;
+
+//Variables for user answers/answer key
 var userAnswers = [];
 var answersKey = ["1" , "1" , "1" , "1" , ]
+
 //Game running varaible
 var gameRunning;
-
-//Currently on page load begins the timer
-window.onload = timer();
-function timer(){
-    if (time >= 0){
-        intervalID = setInterval(countdown, 1000);
-    }
-    //Displays the countdown and clears the interval when time reaches 0
-    function countdown (){
-        time--;
-        $("#timeLeft").text("Time left: " + time);
-        if (time <= 0){
-            console.log("times up")
-            clearInterval(intervalID);
-        }
-    }
-}
 
 //Variables for correct and incorrect answers
 var correct = 0;
@@ -40,6 +26,23 @@ if (time > 0){
 
 else if (time <= 0){
     gameRunning = false;
+}
+
+//On page load begins the timer
+window.onload = timer();
+function timer(){
+    if (time >= 0){
+        intervalID = setInterval(countdown, 1000);
+    }
+    //Displays the countdown and clears the interval when time reaches 0
+    function countdown (){
+        time--;
+        $("#timeLeft").text("Time left: " + time);
+        if (time <= 0){
+            console.log("times up")
+            clearInterval(intervalID);
+        }
+    }
 }
 
 //Checks to see which answers were right and which were wrong
@@ -69,6 +72,7 @@ function answers(){
     if (submitted === true){
         endGame();
         alert("Game Over");
+        clearInterval(intervalID);
     }
 }
 
