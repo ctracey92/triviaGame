@@ -9,7 +9,10 @@
     <title>Trivia Game</title>
 </head>
 <body>
-    <h1>Trivia Game</h1>
+
+    <!-- Main Game Container -->
+    <div class="container">
+        <h1>Trivia Game</h1>
 
     <!-- Displays the time left -->
     <div id="timeLeft"> Time left: 60</div>
@@ -17,56 +20,78 @@
     <!-- Displays the questions box -->
     <div id="questions">
         <ol>
-            <li id="q1">
-                What is correct true or false?
-                <form>
-                    <input type="radio" name="question1" value=1> True<br>
-                    <input type="radio" name="question1" value=0> False<br>
-                </form>
-            </li>
-            <li id="q2">
-                What is correct true or false?
-                <form>
-                    <input type="radio" name="question2" value=1> True<br>
-                    <input type="radio" name="question2" value=0> False<br>
-                </form>
+            <div class="row">
+                <li id="q1">
+                    What is correct true or false?
+                    <form>
+                        <input type="radio" name="question1" value=1> <img id="potion" src="assets/images/potion.png" alt="potion"> True<br>
+                        <input type="radio" name="question1" value=0> <img id="sword" src="assets/images/sword.png" alt="sword"> False<br>
+                    </form>
+                </li> 
+            </div>
+            
 
-            </li>
-            <li id="q3">
-                What is correct true or false?
-                <form>
-                    <input type="radio" name="question3" value=1> True<br>
-                    <input type="radio" name="question3" value=0> False<br>
-                </form>
+            <div class="row">
+                <li id="q2">
+                    What is correct true or false?
+                    <form>
+                        <input type="radio" name="question2" value=1> <img id="potion" src="assets/images/potion.png" alt="potion"> True<br>
+                        <input type="radio" name="question2" value=0> <img id="sword" src="assets/images/sword.png" alt="sword"> False<br>
+                    </form>
 
-            </li>
-            <li id="q4">
-                What is correct true or false?
-                <form>
-                    <input type="radio" name="question4" value=1> True<br>
-                    <input type="radio" name="question4" value=0> False<br>
-                </form>
-            </li>
-            <li id="q5">
-                What is correct true or false?
-                <form>
-                    <input type="radio" name="question5" value=0> True<br>
-                    <input type="radio" name="question5" value=1> False<br>
-                </form>
+                </li>
+            </div>
+            
 
-            </li>
+            <div class="row">
+                <li id="q3">
+                    What is correct true or false?
+                    <form>
+                        <input type="radio" name="question3" value=1> <img id="potion" src="assets/images/potion.png" alt="potion"> True<br>
+                        <input type="radio" name="question3" value=0> <img id="sword" src="assets/images/sword.png" alt="sword"> False<br>
+                    </form>
+
+                </li> 
+            </div>
+            
+
+            <div class="row">
+                <li id="q4">
+                    What is correct true or false?
+                    <form>
+                        <input type="radio" name="question4" value=1> <img id="potion" src="assets/images/potion.png" alt="potion"> True<br>
+                        <input type="radio" name="question4" value=0> <img id="sword" src="assets/images/sword.png" alt="sword"> False<br>
+                    </form>
+                </li>
+            </div>
+            
+
+            <div class="row">
+                <li id="q5">
+                    What is correct true or false?
+                    <form>
+                        <input type="radio" name="question5" value=0> <img id="potion" src="assets/images/potion.png" alt="potion"> True<br>
+                        <input type="radio" name="question5" value=1> <img id="sword" src="assets/images/sword.png" alt="sword"> False<br>
+                    </form>
+                </li> 
+            </div>
+            
         </ol>
         <input type="submit" id="submitButton" value="Done!">
     </div>
+    </div>
 
     <!-- Displays the answers correct/incorrect and try again button -->
-    <div id="gameOver">
-            <div id="correctAnswers"></div>
-            <div id="incorrectAnswers"></div>
-            <a href="index.html">
-                <input type="submit" id="submitButton" value="Try Again?">
-            </a>
-        </div>
+    <div class="container">
+        <div id="gameOver">
+                <div id="correctAnswers"></div>
+                <div id="incorrectAnswers"></div>
+                <a href="index.html">
+                    <input type="submit" id="submitButton" value="Try Again?">
+                </a>
+        </div>  
+    </div>
+    
 
 <!-- Link to JS sheets via CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

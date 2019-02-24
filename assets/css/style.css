@@ -1,7 +1,40 @@
 #gameOver {
     display: none;
+    font-size: 40px;
 }
 
-#questions #timeLeft{
+#questions, #timeLeft{
     display: block;
+}
+
+@font-face{
+    font-family: "dnd";
+    src: url(../fonts/MedievalSharp.ttf)
+}
+
+body {
+    background-image: url(../images/parchment.jpg);
+    font-family: 'dnd', cursive;
+    font-weight: bold;
+}
+
+#timeLeft{
+    color: red;
+    font-size: 30px;
+}
+
+.container{
+    max-width: 400px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+#questions{
+    font-size: 20px;
+}
+
+#potion, #sword{
+    max-width: 40px;
 }
