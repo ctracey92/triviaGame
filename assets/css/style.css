@@ -18,6 +18,7 @@ body {
     font-family: 'dnd', cursive;
     font-weight: bold;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #timeLeft{
@@ -43,7 +44,7 @@ h1{
     font-size: 20px;
 }
 
-#potion, #sword{
+#potion, #sword, #book, #wand{
     max-width: 40px;
 }
 
