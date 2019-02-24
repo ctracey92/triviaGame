@@ -8,9 +8,6 @@ var submitted = false;
 var userAnswers = [];
 var answersKey = ["1" , "1" , "1" , "1" , ]
 
-//Game running varaible
-var gameRunning;
-
 //Variables for correct and incorrect answers
 var correct = 0;
 var incorrect = 0;
@@ -28,6 +25,7 @@ function timer(){
         if (time <= 0){
             console.log("times up")
             clearInterval(intervalID);
+            answers();
         }
     }
 }
@@ -69,7 +67,6 @@ function answers(){
         endGame();
         showScore();
         hideAll();
-        alert("Game Over");
         clearInterval(intervalID);
     }
 }
