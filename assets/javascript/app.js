@@ -15,15 +15,6 @@ var gameRunning;
 var correct = 0;
 var incorrect = 0;
 
-//Game Running Conditions
-if (time > 0){
-    gameRunning = true;
-}
-
-else if (time <= 0){
-    gameRunning = false;
-}
-
 //On page load begins the timer
 window.onload = timer();
 function timer(){
