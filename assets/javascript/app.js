@@ -1,12 +1,12 @@
 //Starting variables for the timer
-var time = 60;
+var time = 90;
 var running = true; 
 var intervalID;
 var submitted = false;
 
 //Variables for user answers/answer key
 var userAnswers = [];
-var answersKey = ["1" , "1" , "1" , "1" , "1" ]
+var answersKey = ["1" , "1" , "1" , "1" , "1" , "1" , "1" , "1" , "1" , "1"]
 
 //Variables for correct and incorrect answers
 var correct = 0;
@@ -60,7 +60,12 @@ function answers(){
     var answer3 = $( "input[type=radio][name=question3]:checked" ).val()
     var answer4 = $( "input[type=radio][name=question4]:checked" ).val()
     var answer5 = $( "input[type=radio][name=question5]:checked" ).val()
-    userAnswers.push(answer1, answer2, answer3, answer4, answer5);
+    var answer6 = $( "input[type=radio][name=question6]:checked" ).val()
+    var answer7 = $( "input[type=radio][name=question7]:checked" ).val()
+    var answer8 = $( "input[type=radio][name=question8]:checked" ).val()
+    var answer9 = $( "input[type=radio][name=question9]:checked" ).val()
+    var answer10 = $( "input[type=radio][name=question10]:checked" ).val()
+    userAnswers.push(answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10);
     console.log(userAnswers);
     submitted = true;
     if (submitted === true){
